@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maggie's Bridal & Prom | Fairlawn, Ohio</title>
+  <meta name="description" content="Maggie's Bridal & Prom — Northeast Ohio's destination for wedding, prom, homecoming, and formal dresses in Fairlawn, Ohio.">
+  <style>
+    :root{
+      --ink:#2d2730;
+      --muted:#756d75;
+      --cream:#fbf7f3;
+      --rose:#b98788;
+      --rose-dark:#8f6265;
+      --blush:#f1dfdc;
+      --white:#fff;
+      --line:#e9dfda;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--cream);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .topbar{background:var(--ink);color:white;text-align:center;padding:9px 18px;font:600 12px/1.3 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+    nav{position:sticky;top:0;z-index:20;background:rgba(251,247,243,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav-inner{max-width:1180px;margin:auto;padding:18px 24px;display:flex;align-items:center;justify-content:space-between;gap:25px}
+    .logo{font-size:25px;letter-spacing:.03em;white-space:nowrap}
+    .logo span{display:block;font:10px Arial,sans-serif;letter-spacing:.25em;text-transform:uppercase;color:var(--rose-dark);margin-top:1px}
+    .links{display:flex;gap:28px;font:600 13px Arial,sans-serif}
+    .links a:hover{color:var(--rose-dark)}
+    .nav-cta,.btn{background:var(--rose-dark);color:white;padding:12px 19px;border-radius:2px;font:700 12px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--rose-dark);display:inline-block;transition:.2s}
+    .nav-cta:hover,.btn:hover{background:#754d50;transform:translateY(-1px)}
+    .hero{min-height:680px;display:grid;place-items:center;text-align:center;padding:90px 20px;position:relative;overflow:hidden;background:
+      radial-gradient(circle at 15% 20%,rgba(241,223,220,.9),transparent 32%),
+      radial-gradient(circle at 85% 80%,rgba(185,135,136,.17),transparent 30%),
+      linear-gradient(120deg,#fffaf7,#f5e8e4)}
+    .hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(143,98,101,.18);border-radius:50%;width:440px;height:440px}
+    .hero:before{left:-210px;top:-170px}.hero:after{right:-210px;bottom:-210px}
+    .hero-content{max-width:820px;position:relative;z-index:1}
+    .eyebrow{font:700 12px Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;color:var(--rose-dark);margin-bottom:18px}
+    h1{font-size:clamp(48px,8vw,86px);line-height:.98;font-weight:400;margin:0 0 25px}
+    .hero p{font-size:20px;color:#615961;max-width:650px;margin:0 auto 34px}
+    .hero-buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .btn.alt{background:transparent;color:var(--rose-dark)}
+    section{padding:85px 24px}
+    .container{max-width:1120px;margin:auto}
+    .section-head{text-align:center;max-width:700px;margin:0 auto 45px}
+    .section-head h2{font-size:43px;font-weight:400;line-height:1.1;margin:8px 0 14px}
+    .section-head p{color:var(--muted);font-family:Arial,sans-serif;font-size:15px}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .card{background:white;border:1px solid var(--line);padding:30px 24px;min-height:220px}
+    .card .num{font:700 11px Arial,sans-serif;letter-spacing:.15em;color:var(--rose-dark)}
+    .card h3{font-size:25px;font-weight:400;margin:20px 0 10px}
+    .card p{font:14px/1.7 Arial,sans-serif;color:var(--muted);margin:0}
+    .feature{background:#2d2730;color:white}
+    .feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+    .feature .eyebrow{color:#d9b5b5}
+    .feature h2{font-size:50px;font-weight:400;line-height:1.05;margin:0 0 18px}
+    .feature p{color:#d9d0d3;font:15px/1.8 Arial,sans-serif}
+    .quote{border-left:2px solid var(--rose);padding-left:24px;margin-top:30px;font-size:19px}
+    .rating{font:700 13px Arial,sans-serif;letter-spacing:.1em;color:#ead0cf}
+    .reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .review{background:white;padding:30px;border:1px solid var(--line)}
+    .stars{letter-spacing:3px;color:var(--rose-dark);font-family:Arial,sans-serif}
+    .review p{font-size:17px;margin:15px 0 20px}
+    .review small{font:12px Arial,sans-serif;color:var(--muted)}
+    .visit{background:var(--blush)}
+    .visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+    .info-box{background:white;padding:35px;border:1px solid #e5d3cf}
+    .info-box h3{font-size:28px;font-weight:400;margin-top:0}
+    .info-row{padding:15px 0;border-bottom:1px solid var(--line);font:14px/1.6 Arial,sans-serif}
+    .info-row:last-child{border-bottom:0}
+    .info-row strong{display:block;color:var(--ink);margin-bottom:3px}
+    .map{min-height:100%;background:linear-gradient(135deg,#e6d5d1,#f8efeb);display:grid;place-items:center;text-align:center;padding:40px;border:1px solid #e5d3cf}
+    .map-inner{border:1px dashed var(--rose-dark);padding:45px 30px;max-width:350px}
+    footer{background:#211d22;color:#d9d0d3;padding:45px 24px}
+    .footer-inner{max-width:1120px;margin:auto;display:flex;justify-content:space-between;gap:30px;align-items:center}
+    footer .logo{color:white}
+    footer p{font:12px Arial,sans-serif}
+    @media(max-width:850px){
+      .links{display:none}.cards{grid-template-columns:1fr 1fr}.reviews,.feature-grid,.visit-grid{grid-template-columns:1fr}
+      .feature-grid{gap:30px}.hero{min-height:590px}
+    }
+    @media(max-width:520px){
+      .cards{grid-template-columns:1fr}.nav-inner{padding:14px 16px}.nav-cta{padding:10px 12px}
+      section{padding:65px 18px}.section-head h2,.feature h2{font-size:37px}.hero p{font-size:17px}
+      .footer-inner{flex-direction:column;align-items:flex-start}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">Fairlawn, Ohio · Northeast Ohio's Bridal & Prom Destination</div>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="logo" href="#">Maggie's <span>Bridal & Prom</span></a>
+      <div class="links">
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#visit">Visit Us</a>
+      </div>
+      <a class="nav-cta" href="tel:3305981598">Call Us</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Bridal · Prom · Homecoming · Formal</div>
+      <h1>Find the dress<br>that feels like you.</h1>
+      <p>Discover wedding gowns, prom dresses, homecoming styles, and formalwear at Maggie's Bridal & Prom in the heart of Fairlawn, Ohio.</p>
+      <div class="hero-buttons">
+        <a class="btn" href="https://www.maggiesohio.com" target="_blank" rel="noopener">Make an Appointment</a>
+        <a class="btn alt" href="#collections">Explore Collections</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="collections">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">What we offer</div>
+        <h2>Everything for your special moment.</h2>
+        <p>A welcoming destination for finding a look you'll be excited to wear.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="num">01</div><h3>Bridal</h3><p>Explore a wide selection of wedding gowns with personalized, one-on-one service.</p></article>
+        <article class="card"><div class="num">02</div><h3>Prom</h3><p>Discover standout prom dresses designed to make your night unforgettable.</p></article>
+        <article class="card"><div class="num">03</div><h3>Homecoming</h3><p>Find a style that fits your personality for homecoming and formal events.</p></article>
+        <article class="card"><div class="num">04</div><h3>Formal</h3><p>Shop elegant formalwear for the celebrations and occasions that matter.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="feature" id="about">
+    <div class="container feature-grid">
+      <div>
+        <div class="eyebrow">Why Maggie's</div>
+        <h2>Personal service.<br>Beautiful choices.</h2>
+        <p>Maggie's Bridal & Prom is family-owned and locally rooted in Fairlawn, Ohio. The boutique offers an extensive in-store selection, with bridal sizes ranging from 000–24.</p>
+        <div class="quote">“Beautiful wedding dress selection — extremely helpful employees!”</div>
+      </div>
+      <div>
+        <div class="rating">★★★★★ &nbsp; 4.9 / 5</div>
+        <p style="font-size:19px;margin-top:16px;">Based on 479 reviews</p>
+        <p>Clients can enjoy a personalized shopping experience while exploring bridal, prom, homecoming, and formal dresses.</p>
+        <a class="btn" href="#visit">Plan Your Visit</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Client love</div>
+        <h2>What people are saying.</h2>
+        <p>Rated 4.9 stars from 479 reviews.</p>
+      </div>
+      <div class="reviews">
+        <article class="review"><div class="stars">★★★★★</div><p>“Beautiful wedding dress selection extremely helpful employees!”</p><small>Verified customer review</small></article>
+        <article class="review"><div class="stars">★★★★★</div><p>“A welcoming destination for finding a beautiful dress for a special occasion.”</p><small>Customer experience</small></article>
+        <article class="review"><div class="stars">★★★★★</div><p>“A great local place to explore bridal and formal styles.”</p><small>Customer experience</small></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="visit" id="visit">
+    <div class="container">
+      <div class="section-head">
+        <div class="eyebrow">Come see us</div>
+        <h2>Your dress is waiting.</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="info-box">
+          <h3>Maggie's Bridal & Prom</h3>
+          <div class="info-row"><strong>Address</strong>2975 W Market St, Fairlawn, OH 44333</div>
+          <div class="info-row"><strong>Hours</strong>Open · Closes 6 PM</div>
+          <div class="info-row"><strong>Phone</strong><a href="tel:3305981598">(330) 598-1598</a></div>
+          <div class="info-row"><strong>Website</strong><a href="https://www.maggiesohio.com" target="_blank" rel="noopener">maggiesohio.com</a></div>
+          <br>
+          <a class="btn" href="https://www.maggiesohio.com" target="_blank" rel="noopener">Make an Appointment</a>
+        </div>
+        <div class="map">
+          <div class="map-inner">
+            <div class="eyebrow">Fairlawn, Ohio</div>
+            <h3>2975 W Market St</h3>
+            <p>Serving Fairlawn and nearby Northeast Ohio communities.</p>
+            <a class="btn" href="https://www.google.com/maps/search/?api=1&query=2975+W+Market+St+Fairlawn+OH+44333" target="_blank" rel="noopener">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="logo">Maggie's <span>Bridal & Prom</span></div>
+      <p>© 2026 Maggie's Bridal & Prom · Fairlawn, Ohio</p>
+    </div>
+  </footer>
+</body>
+</html>
